@@ -1,0 +1,30 @@
+body {
+  background-color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Helvetica;
+}
+.data-show {
+  transform: translateY(-100%);
+  transition: .5s transform ease-in-out
+}
+.data-up {
+  transform: translateY(-200%);
+  transition: .5s transform ease-in-out
+}
+
+.w-container-mask-content0 {
+  background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+
+.w-container-mask-content1 {
+  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+}
+
+.w-container-mask-content2 {
+  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+}
+
+.w-container-mask-content3 {
+  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+}
