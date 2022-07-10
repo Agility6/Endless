@@ -7,11 +7,15 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: 'Home',
+    redirect: '/backdrop',
   },
   {
     path: '/Home',
-    component: () => import('../views/home/index')
+    component: () => import('../views/home/index'),
+  },
+  {
+    path: '/backdrop',
+    component: () => import('../views/home/backdrop')
   }
 ]
 

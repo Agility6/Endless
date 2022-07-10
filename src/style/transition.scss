@@ -1,6 +1,6 @@
-// Home
-.back-btn-leave-active,.back-leave-active,.back-leave-active {
-  animation: bounce-in .8s reverse;
+// 主页背景动画
+.backdrop-leave-active {
+  animation: bounce-in 0.8s reverse;
 }
 @keyframes bounce-in {
   0% {
