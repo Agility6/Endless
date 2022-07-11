@@ -1,31 +1,34 @@
 <template>
   <div class="container" v-if="homeShow">
-      <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
-      </el-container>
+    <el-container>
+      <el-aside width="100px">
+        <Sidebar />
+      </el-aside>
+      <el-main>Main</el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import Sidebar from '../components/Sidebar/index.vue';
 import Backdrop from "./backdrop.vue";
 export default {
   name: "Home",
-  components: { Backdrop },
+  components: { Backdrop, Sidebar },
   data() {
     return {
-      isShowHome: this.homeShow
-    }
+      isShowHome: this.homeShow,
+    };
   },
   computed: {
     ...mapState(["homeShow"]),
   },
-  created() { 
+  created() {
     // 如果sessionStorage中存储了sessionHomeShow,那么将store改为true
-      if (sessionStorage.getItem("sessionHomeShow") ) {
-        this.$store.commit('CHANG_HOME_SHOW',true)
-      }
+    if (sessionStorage.getItem("sessionHomeShow")) {
+      this.$store.commit("CHANG_HOME_SHOW", true);
+    }
   },
 };
 </script>
@@ -36,7 +39,5 @@ export default {
   display: flex;
   height: 100vh;
   width: 100%;
-
 }
-
 </style>
