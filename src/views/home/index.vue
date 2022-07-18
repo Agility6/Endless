@@ -1,7 +1,7 @@
 <template>
   <div class="container" v-if="homeShow">
     <el-container>
-      <el-aside width="100px">
+      <el-aside width="10rem">
         <Sidebar />
       </el-aside>
       <el-main>Main</el-main>

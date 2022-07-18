@@ -48,6 +48,7 @@ export default {
 @import "@/style/transition.scss";
 .back-container {
   display: flex;
+  // position: relative;
   height: 100%;
   width: 100%;
   .back-backdrop {
@@ -88,6 +89,9 @@ export default {
       }
     }
     .img-back {
+      // position: absolute;
+      // top: 0;
+      // right: 0;
       width: 800px;
       height: 800px;
     }
