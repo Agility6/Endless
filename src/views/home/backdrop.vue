@@ -49,8 +49,9 @@ export default {
 .back-container {
   display: flex;
   // position: relative;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  background-color: #e0e0e0;
   .back-backdrop {
     .welcome {
       z-index: 2;
