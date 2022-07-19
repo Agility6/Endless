@@ -4,7 +4,10 @@
       <el-aside width="10rem">
         <Sidebar />
       </el-aside>
-      <el-main>Main</el-main>
+      <el-main>
+        <!-- <button  @click="$router.push('study')">按钮</button> -->
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </div>
 </template>
@@ -12,14 +15,15 @@
 <script>
 import { mapState } from "vuex";
 import Sidebar from '../components/Sidebar/index.vue';
-import Backdrop from "./backdrop.vue";
 export default {
   name: "Home",
-  components: { Backdrop, Sidebar },
+  components: { Sidebar },
   data() {
     return {
-      isShowHome: this.homeShow,
     };
+  },
+  methods: {
+
   },
   computed: {
     ...mapState(["homeShow"]),

@@ -6,14 +6,15 @@
       @mouseleave="leaveFun()"
     >
       <li
-        v-for="(item, index) in homeData"
+        v-for="(item, index) in routes"
         :key="index"
         :index="`1-${index}`"
         @mousemove="enterFun(index, $event)"
         ref="item"
         class="aside-container-item"
+        @click="jump(item.path)"
       >
-        {{ item }}
+        {{ item.icon }}
       </li>
     </ul>
   </div>
@@ -24,7 +25,16 @@ export default {
   data() {
     return {
       isCollapse: false,
-      homeData: ["📖", "🤵🏻", "🤔", "🤔", "🤔"],
+      routes: [
+        {
+          icon: '📖',
+          path: '/Home/study'
+        },  
+        {
+          icon: '🤵🏻',
+          path: '/Home/personal'
+        }
+      ]
     };
   },
   methods: {
@@ -63,6 +73,14 @@ export default {
         element.style.setProperty("--scale", 1);
       });
     },
+    /**
+     * 判断当前路由和点击时的路由是否相同
+     */
+    jump(path) {
+      if(this.$route.path !== path){
+        this.$router.push(path)
+      } 
+    }
   },
 };
 </script>

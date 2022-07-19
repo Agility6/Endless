@@ -12,11 +12,23 @@ const routes = [
   {
     path: '/Home',
     component: () => import('../views/home/index'),
+    children: [
+      {
+        name: 'study',
+        path: 'study',
+        component: () => import('../views/study/index')
+      },
+      {
+        name: 'personal',
+        path: 'personal',
+        component: () => import('../views/personal/index')
+      }
+    ]
   },
   {
     path: '/backdrop',
     component: () => import('../views/home/backdrop')
-  }
+  },
 ]
 
 const router = new VueRouter({
